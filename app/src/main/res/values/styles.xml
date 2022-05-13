@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TabLayoutTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="anim_style_popwin_gender">
+        <item name="android:windowEnterAnimation">@anim/show_popwin_gender</item>
+        <item name="android:windowExitAnimation">@anim/exit_popwin_gender</item>
+    </style>
+
+</resources>

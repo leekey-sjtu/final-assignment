@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/layout_news_2_comment_item_view.xml" value="0.14764492753623187" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/drawable/bg_round_rectangle_2.xml" value="0.143" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/activity_news2_detail.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news_1.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news_2.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news_3.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news_4.xml" value="0.25" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news_5.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news_6.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_shop.xml" value="0.2678478374153205" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/layout_news_2_item_view.xml" value="0.10869565217391304" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/layout_news_3_item_view.xml" value="0.14764492753623187" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/layout_news_4_item_view.xml" value="0.335" />
+        <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/layout_news_5_item_view.xml" value="0.375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

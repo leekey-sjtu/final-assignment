@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_width">392.7dp</dimen>
+    <dimen name="screen_height">821.8dp</dimen>
+    <dimen name="comment_height">771.8dp</dimen>
+</resources>

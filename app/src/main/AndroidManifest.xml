@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bytedance.sjtu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_tiktok"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/net_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SJTU">
+        <activity
+            android:name=".shop.MenuActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.SubjectActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.TesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.ShopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.PostActivity"
+            android:exported="false" />
+        <activity
+            android:name=".me.EditInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".me.SettingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".me.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".post.CameraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".shop.TestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".news.NewsDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
