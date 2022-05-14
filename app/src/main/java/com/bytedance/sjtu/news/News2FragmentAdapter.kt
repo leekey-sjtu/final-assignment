@@ -16,7 +16,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.request.RequestOptions
 import com.bytedance.sjtu.R
 
-class News2FragmentAdapter(private val context: Context, private val newsList: MutableList<NewsBean.News>): RecyclerView.Adapter<News2FragmentAdapter.ViewHolder>() {
+class News2FragmentAdapter(
+    private val mContext: Context,
+    private val newsList: MutableList<NewsBean.News>
+    ): RecyclerView.Adapter<News2FragmentAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.layout_news_5_item_view, parent, false)
@@ -26,14 +29,14 @@ class News2FragmentAdapter(private val context: Context, private val newsList: M
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {  //绑定数据
         holder.title.text = newsList[position].title
         holder.passtime.text = newsList[position].passtime
-        Glide.with(context)
+        Glide.with(mContext)
             .load(newsList[position].image)
             .apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL))
             .placeholder(R.drawable.ic_loading_gif)
             .error(R.drawable.ic_loading_error)
             .into(holder.image)
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, "You click item $position", Toast.LENGTH_SHORT).show()
+            Toast.makeText(mContext, "You click item $position", Toast.LENGTH_SHORT).show()
             skipDetailActivity(newsList[position].path,
 //                newsList[position].title
                 "wdw"
@@ -53,9 +56,9 @@ class News2FragmentAdapter(private val context: Context, private val newsList: M
     }
 
     private fun skipDetailActivity(newsUrl: String, newsTitle: String) {
-        val intent = Intent(context, NewsDetailActivity::class.java)
+        val intent = Intent(mContext, NewsDetailActivity::class.java)
         intent.putExtra("newsUrl", newsUrl)
         intent.putExtra("newsTitle", newsTitle)
-        startActivity(context, intent,null)
+        startActivity(mContext, intent,null)
     }
 }

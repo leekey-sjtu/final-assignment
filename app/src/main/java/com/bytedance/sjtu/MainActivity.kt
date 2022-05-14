@@ -14,7 +14,7 @@ import com.bytedance.sjtu.me.MeFragment
 import com.bytedance.sjtu.news.NewsFragment
 import com.bytedance.sjtu.post.CameraActivity
 import com.bytedance.sjtu.shop.MenuActivity
-import com.bytedance.sjtu.shop.ShopFragment
+import com.bytedance.sjtu.msg.MsgFragment
 import com.bytedance.sjtu.video.VideoFragment
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,14 +22,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val navigationBarNews: LinearLayout by lazy { findViewById(R.id.lay_navigation_bar_news) }
     private val navigationBarVideo: LinearLayout by lazy { findViewById(R.id.lay_navigation_bar_video) }
     private val navigationBarPost: LinearLayout by lazy { findViewById(R.id.lay_navigation_bar_post) }
-    private val navigationBarShop: LinearLayout by lazy { findViewById(R.id.lay_navigation_bar_shop) }
+    private val navigationBarShop: LinearLayout by lazy { findViewById(R.id.lay_navigation_bar_msg) }
     private val navigationBarMe: LinearLayout by lazy { findViewById(R.id.lay_navigation_bar_me) }
     private val newsFragment =  NewsFragment()
     private val videoFragment =  VideoFragment()
-    private val shopFragment =  ShopFragment()
+    private val msgFragment =  MsgFragment()
     private val meFragment = MeFragment()
     private lateinit var currentFragment: Fragment
-
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,13 +41,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         navigationBarNews.setOnClickListener(this)  //设置导航栏单击事件
         navigationBarVideo.setOnClickListener(this)
         navigationBarPost.setOnClickListener(this)
-        navigationBarShop.setOnClickListener{
-            Intent(this, MenuActivity::class.java).apply {
-                startActivity(this)
-            }
-        }
+        navigationBarShop.setOnClickListener(this)
         navigationBarMe.setOnClickListener(this)
-
     }
 
     override fun onClick(v: View) {
@@ -69,9 +63,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_none)
                 }
             }
-//            R.id.lay_navigation_bar_shop -> {
-//                switchFragment(shopFragment)
-//            }
+            R.id.lay_navigation_bar_msg -> {
+                switchFragment(msgFragment)
+            }
             R.id.lay_navigation_bar_me -> {
                 if (getSharedPreferences("login", MODE_PRIVATE).getBoolean("loginSuccess", false)) {  //根据SharedPreferences判断用户是否登录
                     switchFragment(meFragment)  //有用户登录信息直接跳转meFragment
@@ -100,6 +94,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         currentFragment = toFragment  //记录新的currentFragment
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         val loginResult = data?.getBooleanExtra("loginResult", false)  //获取回传的loginResult的值

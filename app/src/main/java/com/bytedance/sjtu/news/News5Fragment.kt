@@ -33,13 +33,13 @@ class News5Fragment(private val category: String) : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        getNews()
+        getNews()
     }
 
     private fun getNews() {
         getRetrofit("https://way.jd.com/jisuapi/")
             .create(JDNewsService::class.java)
-            .getJDNews(category, "20", "0", "92b9f9e7465ed6a8a72e27330aa8310a")
+            .getJDNews(category, "50", "0", "92b9f9e7465ed6a8a72e27330aa8310a")
             .enqueue(object : Callback<JDNewsBean> {
                 override fun onResponse(call: Call<JDNewsBean>, response: Response<JDNewsBean>) {
                     Log.d("wdw", "get JDNews success")

@@ -58,6 +58,7 @@ class EditInfoActivity : AppCompatActivity() {
     private val dbHelper = SQLiteHelper(this, "user.db", 1)  //数据库OpenHelper
     private var db: SQLiteDatabase? = null  //声明数据库db
     private val avatarOutputStream = ByteArrayOutputStream()  //获取头像jpg的字节输出流
+    private var isSelectedAvatar: Boolean = false  //判断用户是否选取了新头像
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -190,12 +191,19 @@ class EditInfoActivity : AppCompatActivity() {
             put("location", tvLocation.text.toString())
             put("school", etSchool.text.toString())
             put("introduction", etIntroduction.text.toString())
-            put("avatar", avatarOutputStream.toByteArray())
+            if (isSelectedAvatar) { put("avatar", avatarOutputStream.toByteArray()) }  //如果选了图片，则更新
         }
         db?.update("user", values, "userName = ?", arrayOf(oldUserName))  //更新数据库
         getSharedPreferences("login", MODE_PRIVATE).edit()  //同时将newUserName写入SharedPreferences
             .putString("userName", newUserName)
             .apply()
+    }
+
+    private fun changeAvatar() {
+        Toast.makeText(this,"请尽量选择正方形图片~~~", Toast.LENGTH_LONG).show()
+        val intent = Intent(Intent.ACTION_PICK)  //直接调用系统相册选择照片
+        intent.type = "image/*"
+        startActivityForResult(intent, albumRequestCode)
     }
 
     private fun popWinGenderOnClick(popView: View, popWin: PopupWindow) {
@@ -272,22 +280,20 @@ class EditInfoActivity : AppCompatActivity() {
         animSet.start()
     }
 
-    private fun changeAvatar() {
-        Toast.makeText(this,"请尽量选择正方形图片~~~", Toast.LENGTH_LONG).show()
-        val intent = Intent(Intent.ACTION_PICK)  //直接调用系统相册选择照片
-        intent.type = "image/*"
-        startActivityForResult(intent, albumRequestCode)
-    }
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == albumRequestCode && data != null) {
-            val imgUri = data.data!!  //获取图片的Uri
-            val imgPath = uriToPath(this, imgUri)  //获取图片的path
-            Log.d("wdw", "imgUri.path = $imgPath")
-            val bitmap = BitmapFactory.decodeFile(imgPath)  //获取bitmap
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, avatarOutputStream)  //压缩50%头像文件避免OOM
-            imgAvatar.setImageURI(imgUri)  //同时设置选择的头像预览照片
+        if (requestCode == albumRequestCode) {
+            if (data != null) {
+                val imgUri = data.data!!  //获取图片的Uri
+                val imgPath = uriToPath(this, imgUri)  //获取图片的path
+                Log.d("wdw", "imgUri.path = $imgPath")
+                val bitmap = BitmapFactory.decodeFile(imgPath)  //获取bitmap
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 50, avatarOutputStream)  //压缩50%头像文件避免OOM
+                imgAvatar.setImageURI(imgUri)  //同时设置选择的头像预览照片
+                isSelectedAvatar = true
+            } else {
+                isSelectedAvatar = false
+            }
         }
     }
 

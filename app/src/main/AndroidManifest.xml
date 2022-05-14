@@ -25,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SJTU">
         <activity
+            android:name=".msg.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".shop.MenuActivity"
             android:exported="false" />
         <activity

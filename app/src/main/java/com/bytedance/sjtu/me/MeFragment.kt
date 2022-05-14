@@ -1,28 +1,29 @@
 package com.bytedance.sjtu.me
 
-import android.animation.AnimatorSet
-import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.text.style.UpdateLayout
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bytedance.sjtu.R
 import java.io.ByteArrayInputStream
 import java.util.*
 
 class MeFragment : Fragment() {
 
+    private lateinit var mContext: Context  //获取上下文
     private val imgMore: ImageView by lazy { requireView().findViewById(R.id.imgMore) }
     private val imgAvatar: ImageView by lazy { requireView().findViewById(R.id.imgAvatar) }
     private val tvUserName: TextView by lazy { requireView().findViewById(R.id.userName) }
@@ -31,11 +32,13 @@ class MeFragment : Fragment() {
     private val age: TextView by lazy { requireView().findViewById(R.id.age) }
     private val location: TextView by lazy { requireView().findViewById(R.id.location) }
     private val school: TextView by lazy { requireView().findViewById(R.id.school) }
+    private val recyclerView: RecyclerView by lazy { requireView().findViewById(R.id.recyclerView) }
     private var dbHelper: SQLiteHelper? = null  //数据库Helper
     private var db: SQLiteDatabase? = null  //声明数据库db
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
+        this.mContext = requireActivity()
         dbHelper = SQLiteHelper(context, "user.db", 1)  //activity与之attach后再实例化数据库Helper, 否则报错
     }
 
@@ -53,6 +56,10 @@ class MeFragment : Fragment() {
         imgMore.setOnClickListener {
             startActivity(Intent(requireActivity(), SettingActivity::class.java))
         }
+
+        val toolList = mutableListOf("我的作品", "我的商城", "我的购物车", "我的快递信息", "我的个人主页", "更多工具 →")
+        recyclerView.layoutManager = GridLayoutManager(mContext, 2)
+        recyclerView.adapter = MeFragmentAdapter(mContext, toolList)
     }
 
     @SuppressLint("SetTextI18n")
@@ -123,6 +130,7 @@ class MeFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         initInfo()  //重新进入fragment需要重新加载个人信息
+        requireActivity().window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE  //切换状态栏字体为白色
     }
 
 }

@@ -3,7 +3,46 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/SJTU/app/src/main/res/drawable/bg_round_rectangle_12.xml" value="0.147" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/drawable/bg_round_rectangle_14.xml" value="0.147" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/drawable/btn_selector_1.xml" value="0.147" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/drawable/btn_selector_2.xml" value="0.147" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/drawable/btn_selector_3.xml" value="0.147" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/drawable/btn_selector_4.xml" value="0.147" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/activity_chat.xml" value="0.375" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/activity_edit_info.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/activity_main.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/activity_news2_detail.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/activity_setting.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/fragment_msg.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/layout_chat_item_view.xml" value="0.335" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/layout_me_fragment_tools_card_view.xml" value="0.13019250253292808" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/layout_msg_fragment_item_view.xml" value="0.25" />
+        <entry key="..\:/Android/SJTU/app/src/main/res/layout/layout_news_5_item_view.xml" value="0.15443840579710144" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/drawable/bg_round_rectangle_13.xml" value="0.192" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/activity_main.xml" value="0.14764492753623187" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/activity_menu.xml" value="0.15307971014492755" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/activity_shop.xml" value="0.15307971014492755" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/fragment_me.xml" value="0.335" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/fragment_shop.xml" value="0.14764492753623187" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/layout_me_fragment_tools_card_view.xml" value="0.375" />
         <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/layout_news_2_comment_item_view.xml" value="0.14764492753623187" />
+        <entry key="..\:/Android/SJTU0513/app/src/main/res/layout/layout_news_5_item_view.xml" value="0.15307971014492755" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_1.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_12.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_14.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_2.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_3.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_4.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_5.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_6.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_7.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_8.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/bg_round_rectangle_9.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/drawable/btn_selector_4.xml" value="0.186" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/layout/activity_setting.xml" value="0.14764492753623187" />
+        <entry key="..\:/Android/SJTU_0513_1815/app/src/main/res/layout/layout_me_fragment_tools_card_view.xml" value="0.15307971014492755" />
         <entry key="..\:/Android/androidFinalHW/app/src/main/res/drawable/bg_round_rectangle_2.xml" value="0.143" />
         <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/activity_news2_detail.xml" value="0.13019250253292808" />
         <entry key="..\:/Android/androidFinalHW/app/src/main/res/layout/fragment_news.xml" value="0.13019250253292808" />

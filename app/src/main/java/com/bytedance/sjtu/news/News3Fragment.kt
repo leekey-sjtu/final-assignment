@@ -33,7 +33,7 @@ class News3Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        getHotList()
+        getHotList()
     }
 
     private fun getHotList() {

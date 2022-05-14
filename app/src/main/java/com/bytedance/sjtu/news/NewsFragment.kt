@@ -55,7 +55,7 @@ class NewsFragment : Fragment() {
         viewPager2News.adapter = NewsFragmentVP2Adapter(activity, fragments)  //绑定数据
         val runnable = Runnable {
             run {
-                viewPager2News.currentItem = 2  //设置默认页面为第2页
+                viewPager2News.currentItem = 1  //设置默认页面为第2页
             }
         }
         handler.post(runnable)

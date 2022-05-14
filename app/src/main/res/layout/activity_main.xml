@@ -14,6 +14,11 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/light_gray" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -31,7 +36,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/ic_toutiao" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -54,7 +59,7 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/ic_tiktok" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -77,7 +82,8 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:src="@mipmap/ic_launcher" />
+                android:padding="1.5dp"
+                android:src="@drawable/ic_post" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -89,7 +95,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/lay_navigation_bar_shop"
+            android:id="@+id/lay_navigation_bar_msg"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -100,14 +106,14 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:src="@mipmap/ic_launcher" />
+                android:src="@drawable/ic_msg" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textSize="12sp"
-                android:text="商城" />
+                android:text="消息" />
 
         </LinearLayout>
 
@@ -123,7 +129,9 @@
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="3dp"
-                android:src="@mipmap/ic_launcher" />
+                android:scaleX="1.1"
+                android:scaleY="1.1"
+                android:src="@drawable/ic_homepage" />
 
             <TextView
                 android:layout_width="match_parent"
