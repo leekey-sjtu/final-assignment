@@ -34,12 +34,6 @@
             android:name=".shop.SubjectActivity"
             android:exported="false" />
         <activity
-            android:name=".shop.TesActivity"
-            android:exported="false" />
-        <activity
-            android:name=".shop.ShopActivity"
-            android:exported="false" />
-        <activity
             android:name=".post.PostActivity"
             android:exported="false" />
         <activity
