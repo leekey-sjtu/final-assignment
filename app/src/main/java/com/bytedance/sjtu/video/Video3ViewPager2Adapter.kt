@@ -86,10 +86,8 @@ class Video3ViewPager2Adapter(
                     lastClick = curClick
                 }
                 MotionEvent.ACTION_MOVE -> {
-                    //
                 }
                 MotionEvent.ACTION_UP -> {
-                    //
                 }
             }
             true
@@ -110,17 +108,15 @@ class Video3ViewPager2Adapter(
     }
 
     private fun imgLoveAnimator(x: Float, y: Float, holder: ViewHolder) {
-        Log.d("wdw", "x = $x, y = $y")
-        val deg = Random.nextInt(-30, 30).toFloat()  //生成随机度数
-        Log.d("wdw", "deg = $deg")
+        val deg = Random.nextInt(-30, 30).toFloat()  //生成-30 ~ 30随机度数
         val imgLove = ImageView(context)
-        holder.parentLayout.addView(imgLove)
+        holder.parentLayout.addView(imgLove)  //添加imgLove
         imgLove.setImageResource(R.drawable.ic_love_2)
         imgLove.layoutParams.width = 300
         imgLove.layoutParams.height = 300
-        imgLove.x = x - 150
+        imgLove.x = x - 150  //设置imgLove的横纵坐标
         imgLove.y = y + 100
-        imgLove.rotation = deg
+        imgLove.rotation = deg  //设置imgLove的旋转角
         val animator1 = ObjectAnimator.ofFloat(imgLove, "scaleX", 1.25f, 0.75f, 1f)
         val animator2 = ObjectAnimator.ofFloat(imgLove, "scaleY", 1.25f, 0.75f, 1f)
         val animator3 = ObjectAnimator.ofFloat(imgLove, "alpha", 1f, 1f)
@@ -132,13 +128,13 @@ class Video3ViewPager2Adapter(
         val animSet = AnimatorSet()
         animSet.duration = 300
         animSet.play(animator1).with(animator2).with(animator3)
-        animSet.start()
+        animSet.start()  //播放imgLove的动画
         handler.postDelayed({
             val animSet2 = AnimatorSet()
             animSet2.duration = 300
             animSet2.play(animator4).with(animator5).with(animator6).with(animator7).with(animator8)
             animSet2.start()
-        }, 700)
+        }, 700)  //700ms后播放imgLove消失动画
     }
 
     override fun getItemCount(): Int {

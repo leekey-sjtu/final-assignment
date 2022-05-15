@@ -48,7 +48,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View) {
         when (v.id) {
             R.id.lay_navigation_bar_news -> {
-                window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_STABLE  //切换状态栏字体为白色
                 switchFragment(newsFragment)
             }
             R.id.lay_navigation_bar_video -> {

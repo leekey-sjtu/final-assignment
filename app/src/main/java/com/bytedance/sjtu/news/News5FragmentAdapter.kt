@@ -37,7 +37,6 @@ class News5FragmentAdapter(
             .error(R.drawable.ic_loading_error)
             .into(holder.image)
         holder.itemView.setOnClickListener {
-            Toast.makeText(mContext, "You click item $position", Toast.LENGTH_SHORT).show()
             skipDetailActivity(newsList[position].url, newsList[position].title)  //新闻网页的url和title
             holder.title.setTextColor(Color.parseColor("#999999"))  //title标为已读
         }

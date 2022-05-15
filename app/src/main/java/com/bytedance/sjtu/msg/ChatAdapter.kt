@@ -41,7 +41,7 @@ class ChatAdapter(
         }
 
         holder.itemView.setOnClickListener {
-            Toast.makeText(mContext, "You click msg $position", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(mContext, "You click msg $position", Toast.LENGTH_SHORT).show()
         }
     }
 

@@ -1,5 +1,6 @@
 package com.bytedance.sjtu.msg
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -19,6 +20,7 @@ import kotlin.random.Random
 
 class ChatActivity : AppCompatActivity() {
 
+    private val tvName : TextView by lazy { findViewById(R.id.tvName) }
     private val recyclerView : RecyclerView by lazy { findViewById(R.id.recyclerView) }
     private val editMsg : EditText by lazy { findViewById(R.id.editMsg) }
     private val sendMsg : TextView by lazy { findViewById(R.id.sendMsg) }
@@ -29,6 +31,7 @@ class ChatActivity : AppCompatActivity() {
         window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS)   //设置隐藏状态栏
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR  //切换状态栏字体为黑色
 
+        tvName.text = intent.getStringExtra("name")
         val msgList = mutableListOf(
             Msg( "你好", Msg.SEND),
             Msg( "嗯嗯", Msg.GET),

@@ -33,16 +33,21 @@ class Video3Fragment : Fragment()  {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        getVideo()
+
+    }
+
+    private fun getVideo() {
         getRetrofit().create(VideoService::class.java)
-            .getVideo("121110910068_portrait")
+            .getVideo("121110910068_portrait")  //获取竖屏视频
             .enqueue(object : Callback<VideoBean> {
                 override fun onResponse(call: Call<VideoBean>, response: Response<VideoBean>) {
-                    Log.d("wdw", "getVideo success")
+                    Log.d("wdw", "get Video 3 success")
                     val videoList = response.body()!!.feeds.asReversed()  //获取所有的视频列表
                     viewPager2Video2.adapter = Video3ViewPager2Adapter(mContext, handler,  videoList)
                 }
                 override fun onFailure(call: Call<VideoBean>, t: Throwable) {
-                    Log.d("wdw", "getVideo failed")
+                    Log.d("wdw", "get Video 3 failed -> $t")
                 }
             })
     }

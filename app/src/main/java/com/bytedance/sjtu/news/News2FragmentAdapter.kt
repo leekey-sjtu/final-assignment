@@ -36,12 +36,9 @@ class News2FragmentAdapter(
             .error(R.drawable.ic_loading_error)
             .into(holder.image)
         holder.itemView.setOnClickListener {
-            Toast.makeText(mContext, "You click item $position", Toast.LENGTH_SHORT).show()
-            skipDetailActivity(newsList[position].path,
-//                newsList[position].title
-                "wdw"
-            )  //新闻网页的url和title
-            holder.title.setTextColor(Color.parseColor("#999999"))
+            //newsList[position].title
+            skipDetailActivity(newsList[position].path, "wdw")  //新闻网页的url和title
+            holder.title.setTextColor(Color.parseColor("#999999"))  //将新闻置为已读
         }
     }
 

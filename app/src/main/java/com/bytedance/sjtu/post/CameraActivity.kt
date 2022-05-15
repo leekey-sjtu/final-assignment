@@ -79,7 +79,8 @@ class CameraActivity : AppCompatActivity() {
 
         viewFinder.setOnTouchListener(object : View.OnTouchListener {
             private var mLastTime: Long = 0
-            private  var mCurrentTime: Long = 0
+            private var mCurrentTime: Long = 0
+            @SuppressLint("ClickableViewAccessibility")
             override fun onTouch(view: View, motionEvent: MotionEvent): Boolean {
                 when (motionEvent.action) {
                     MotionEvent.ACTION_DOWN -> {
@@ -133,9 +134,9 @@ class CameraActivity : AppCompatActivity() {
 
         btnConfirm.setOnClickListener {  //确认上传照片/视频
             if (imgPath == null) {
-                Toast.makeText(this, "需要拍照提供封面~", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "点击“取消”按钮，继续拍照提供封面~", Toast.LENGTH_SHORT).show()
             } else if (videoPath == null) {
-                Toast.makeText(this, "需要录像提供视频~", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "点击“取消”按钮，继续录像提供视频~", Toast.LENGTH_SHORT).show()
             } else {
                 val intent = Intent(this, PostActivity::class.java)
                 intent.putExtra("imgPath", imgPath)

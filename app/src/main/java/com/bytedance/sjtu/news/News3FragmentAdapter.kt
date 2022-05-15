@@ -32,7 +32,6 @@ class News3FragmentAdapter(
         holder.title.text = hotList[position].title
         holder.clout.text = hotList[position].other
         holder.itemView.setOnClickListener {
-            Toast.makeText(context, "You click item $position", Toast.LENGTH_SHORT).show()
             skipDetailActivity(hotList[position].link, hotList[position].title)  //新闻网页的url和title
             holder.title.setTextColor(Color.parseColor("#999999"))
         }

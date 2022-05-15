@@ -42,16 +42,16 @@ class Video2Fragment : Fragment()  {
 
     private fun getVideo() {
         getRetrofit().create(VideoService::class.java)
-            .getVideo("121110910068")  //改成121110910068 TODO()
+            .getVideo("121110910068")  //获取横屏视频
             .enqueue(object : Callback<VideoBean> {
                 override fun onResponse(call: Call<VideoBean>, response: Response<VideoBean>) {
-                    Log.d("wdw", "getVideo success")
+                    Log.d("wdw", "get Video 2 success")
                     val videoList = response.body()!!.feeds.asReversed()  //获取所有的视频列表
                     recyclerViewVideo2.layoutManager = LinearLayoutManager(mContext)
                     recyclerViewVideo2.adapter = Video2FragmentAdapter(mContext, handler, videoList)
                 }
                 override fun onFailure(call: Call<VideoBean>, t: Throwable) {
-                    Log.d("wdw", "getVideo failed -> $t")
+                    Log.d("wdw", "get Video 2 failed -> $t")
                 }
             })
     }

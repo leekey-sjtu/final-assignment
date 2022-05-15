@@ -1,11 +1,9 @@
 package com.bytedance.sjtu
 
-import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
-
 
 fun getRetrofit(): Retrofit {
 

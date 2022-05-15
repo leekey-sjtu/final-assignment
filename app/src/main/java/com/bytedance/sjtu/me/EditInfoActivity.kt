@@ -197,6 +197,7 @@ class EditInfoActivity : AppCompatActivity() {
         getSharedPreferences("login", MODE_PRIVATE).edit()  //同时将newUserName写入SharedPreferences
             .putString("userName", newUserName)
             .apply()
+        finish()
     }
 
     private fun changeAvatar() {

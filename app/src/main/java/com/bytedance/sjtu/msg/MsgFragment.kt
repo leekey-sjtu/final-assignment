@@ -28,7 +28,7 @@ class MsgFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val list = mutableListOf("1","2","1","2","1","2","1","2","1","2","1","2","1","2","1","2","1","2")
+        val list = mutableListOf("吴德威","张三","李四","王五","abcd","123","1433223","2333","1234","2022","196","278","122","2345","124","2645","1645","212")
         recyclerView.layoutManager = LinearLayoutManager(mContext)
         recyclerView.adapter = MsgFragmentAdapter(mContext, list)
     }

@@ -12,13 +12,34 @@
         android:layout_height="35dp"
         android:background="@color/silver_red" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/silver_red"
-        android:text="搜索框"
-        android:textSize="36sp"
-        android:gravity="center" />
+        android:layout_height="60dp"
+        android:background="@color/silver_red">
+
+        <EditText
+            android:id="@+id/editMsg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:paddingStart="12dp"
+            android:hint="输入搜索内容"
+            android:textSize="18sp"
+            android:background="@drawable/bg_round_rectangle_2" />
+
+        <TextView
+            android:id="@+id/sendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            android:text="搜索"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#dddddd" />
+
+    </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
