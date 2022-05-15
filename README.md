@@ -1,5 +1,5 @@
 # Final Assignment
-
+[点击下载APK](https://github.com/leekey-sjtu/final-assignment/raw/master/app-release.apk)
 ```cpp
 The final assignment of the SJTU & Bytedance optional course for spring 2022
 ```
