@@ -3,9 +3,6 @@
 ```cpp
 The final assignment of the SJTU & Bytedance optional course for spring 2022
 ```
-**组队信息：**
-- **队员1：吴德威**
-- **队员2：侯靖一**
 
 # App项目简介
 
